@@ -1,14 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import pluginComponetns from './lib/globel_components'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css';
 
-Vue.config.productionTip = false
-Vue.use(pluginComponetns)
-Vue.use(ElementUI)
+import pluginCompontent from './lib/globel_components';
+
+Vue.config.productionTip = false;
+Vue.use(pluginCompontent);
+Vue.use(Mint);
+
 
 new Vue({
   router,

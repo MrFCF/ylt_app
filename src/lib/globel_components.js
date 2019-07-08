@@ -1,9 +1,8 @@
-import Vue from 'vue'
-import topHeader from "@/components/topHeader"
+import topHeaderComponent from "@/components/topHeader.vue"
 
 const pluginComponetns = {
-    install:function(){
-        Vue.component('topHeader',topHeader)
+    install:function(Vue){
+        Vue.component('top-header',topHeaderComponent)
     }
 }
 

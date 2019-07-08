@@ -1,53 +1,42 @@
 <template>
-    <div class="top_header">
-        <div class="grid-content th-back" @click="backUrl">
-            <slot name="l"></slot>    
-        </div>
-        <div class="grid-content th-title">
-            <slot name="c"></slot>    
-        </div>
-        <div class="grid-content th-r">
-            <slot name="r"></slot>
-        </div>
-    </div>
+  <mt-header :title="title">
+    <mt-button v-if="Header_l" icon="back" slot="left" @click="backBtn"></mt-button>
+    <mt-button slot="right" @click="jumpUrl">{{Header_r}}</mt-button>
+  </mt-header>
 </template>
 
 <script>
 export default {
-    name:'top_header',
-    props:['goUrl'],
-    data() {
-        return {
-        }
-    },
-    methods:{
-        backUrl(){
-            if(this.backUrl){
-                this.$router.push(this.backurl)
-            }else{
-                this.$router.push(-1)
-            }
-        }
+  name: 'topHeader',
+  props: ["Header_r","Header_l","title","goUrl","backUrl"],
+  mounted(){
+    if(!this.Header_l){
+      
     }
+  },
+  methods: {
+    jumpUrl(){
+      if(this.goUrl){
+        this.$router.push('/'+this.goUrl)
+      }
+    },
+    backBtn(){
+      this.$router.back(-1)
+    }
+  }
 }
 </script>
 
-<style lang='scss'>
-    .top_header{
-        height: $th;
-        font-size: $text-size-mid;
-        padding: 0 px2rem(40);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #000000;
-        .th-back{
-            height: px2rem(34);
-            width: px2rem(19);
-            img{
-                height: 100%;
-                width: 100%;
-            }
-        }
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+  .mint-header{
+    height: $th;
+    background-color: #ffffff;
+    color: #424242;
+    font-size: px2rem(28);
+    padding: 0 px2rem(40);
+    button{
+      font-weight: 700;
     }
+  }
 </style>

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 body,
 html {
-  background: #f0f0f0;
-  color: #505050;
+  background: #ffffff;
+  color: #000000;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -11,12 +11,13 @@ html {
   -webkit-touch-callout: none;
   -webkit-overflow-scrolling: touch;
 }
+html,
 body,
 button,
 input,
 select,
 textarea {
-  font: 14px/1.5 'PingFang SC','\5b8b\4f53', 'Helvetica Neue', Arial, 'Liberation Sans',
+  font: 20px/1.5 "Avenir", Helvetica, Arial, sans-serif, 'PingFang SC','\5b8b\4f53', 'Helvetica Neue', 'Liberation Sans',
     FreeSans, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   line-height: 20px;
 }

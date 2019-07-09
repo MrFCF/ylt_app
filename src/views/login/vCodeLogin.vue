@@ -10,11 +10,13 @@
         </div>
         <div class="PW_warp">
           <p>验证码</p>
-          <mt-field label="" placeholder="请输入验证码" v-model="login.PW_warp"></mt-field>
+          <mt-field label="" placeholder="请输入验证码" v-model="login.PW_warp">
+            <span>获取验证码</span>
+          </mt-field>
         </div>
         <div class="login_warp">
           <mt-button size="large" class="login_btn">登录</mt-button>
-          <mt-button size="large" class="register_btn">注册</mt-button>
+          <router-link to="/register"><mt-button size="large" class="register_btn">注册</mt-button></router-link>  
         </div>
       </div>
     </div>
@@ -23,7 +25,7 @@
 
 <script>
 export default {
-  name: 'loginPw',
+  name: 'vCodeLogin',
   data() {
     return {
       Header_l:true,
@@ -39,58 +41,59 @@ export default {
     .login_warp{
         margin-top: px2rem(140) !important;
     }
-    
-    
 </style>
 <style lang="scss">
-  .main_warp{
-    padding: 0 px2rem(80);
-    .title{
-      height: px2rem(102);
-      line-height: px2rem(102);
-      font-size: $text-size-imp;
-      font-weight: 700; 
-    }
-    .form_warp{
-      margin-top: px2rem(151);
-      .mint-cell-wrapper{
-        padding-left: 0px;
-        border-bottom: 1px solid #D3D5DB;
-        font-size: $text-size-mid;
-        ::-webkit-input-placeholder{
-          color: #999999;
+  .loginPw{
+    .main_warp{
+      padding: 0 px2rem(80);
+      .title{
+        height: px2rem(102);
+        line-height: px2rem(102);
+        font-size: $text-size-imp;
+        font-weight: 700; 
+      }
+      .form_warp{
+        margin-top: px2rem(151);
+        .mint-cell-wrapper{
+          padding-left: 0px;
+          border-bottom: 1px solid #D3D5DB;
+          font-size: $text-size-mid;
+          ::-webkit-input-placeholder{
+            color: #999999;
+          }
         }
-      }
-      .user_warp{
-        margin-bottom: px2rem(40);
-      }
-      p{
-        font-size: $text-size-mid;;
-      }
-      .forget_Pw{
-        text-align: right;
-        font-size: $text-size-mid;
-        margin-top: px2rem(20);
-        color: #666666;
-      }
-      .login_warp{
-        margin-top: px2rem(80);
-        button{
-          border-radius: px2rem(50);
-          height: px2rem(80);
+        .user_warp{
+          margin-bottom: px2rem(40);
         }
-        .login_btn{
-          background: #4C82FF;
-          color: #ffffff;
+        p{
+          font-size: $text-size-mid;;
         }
-        .register_btn{
-          background: #ffffff;
-          color: #4C82FF;
+        .forget_Pw{
+          text-align: right;
+          font-size: $text-size-mid;
           margin-top: px2rem(20);
+          color: #666666;
+        }
+        .login_warp{
+          margin-top: px2rem(80);
+          button{
+            border-radius: px2rem(50);
+            height: px2rem(80);
+          }
+          .login_btn{
+            background: #4C82FF;
+            color: #ffffff;
+          }
+          .register_btn{
+            background: #ffffff;
+            color: #4C82FF;
+            margin-top: px2rem(20);
+          }
         }
       }
     }
   }
+    
 </style>
 
 

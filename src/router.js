@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import loginPw from './views/login/loginPw.vue'
 import nofound from './views/nofound/nofound.vue'
 import home from './views/home/home.vue'
+import me from './views/home/me.vue'
+import info from './views/home/info.vue'
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: home
+    },
+    {
+      path: '/me',
+      name: 'me',
+      component: me
+    },
+    {
+      path: '/info',
+      name: 'info',
+      component: info
     },
     {
       path: '*',
